@@ -1,0 +1,114 @@
+.header{
+    background: #FAE5D3 ;
+    display: flex;
+}
+  
+.header-wrapper{
+    position: absolute;
+    z-index: 7;
+    right: 0;
+    left: 0;
+}
+  
+.header-top{
+    display:flex;
+    padding-top: 18px;
+    justify-content:flex-end;
+    align-items: center;
+}
+  
+.header-top-logo a{
+    text-decoration: none;
+    padding-right: 50px;
+    font-size:60px;
+    font-family: 'Dancing Script', cursive;
+    color: #fed136;
+}
+  
+.header-top-logo .h a{
+    margin-left: 20px;
+}
+  
+.header-contact-wrapper,
+.header-socials-wrapper{
+    display: flex; 
+    color: #E59866 ;
+}
+  
+.header-top-mail{
+    padding-left: 30px;
+    justify-content: center;
+}
+  
+.far:hover {
+    -webkit-transform: rotateZ(20deg);
+    -ms-transform: rotateZ(20deg);
+    transform: rotateZ(20deg);
+}
+  
+  
+@keyframes swing  {
+    60% {
+        -webkit-transform: translateX(6px);
+        transform: translateX(6px);
+      }
+}
+  
+  
+.fas:hover{
+    -webkit-animation: swing 0.1s ease;
+    animation: swing 0.1s ease;
+    -webkit-animation-iteration-count: 5;
+    animation-iteration-count: 5;
+}
+  
+.header-top-phone a,
+.header-top-mail a{
+    text-decoration: none;
+    color: #E59866 ;
+    padding: 3px;
+}
+  
+.header-top-phone a:hover,
+.header-top-mail a:hover{
+    color: #9e9696;
+    background-color: #ededed;
+}
+  
+.header-top-socials a{
+    padding-right: 20px;
+    margin-right: 30px;
+    padding: 5px;
+    text-decoration: none;
+    font-size: 23px;
+}
+  
+.header-top-socials .facebook{ 
+    padding-left: 50px;
+    color: #3b5998;
+}
+  
+.header-top-socials .instagram{
+    color: #da3d82;
+}
+  
+.header-top-socials .linkedin{
+    color: #3b5998;
+}
+  
+.header-top-socials .youtube{
+    color: #E73F2C;
+}
+  
+.header-top-socials .facebook:hover,
+.header-top-socials .linkedin:hover{
+    color: #2C66E7;
+}
+  
+.header-top-socials .instagram:hover{
+    color: #E52CE7;
+}
+  
+.header-top-socials .youtube:hover{
+    color: #F74114;
+}

@@ -1,0 +1,112 @@
+.section-about{
+    background-color:  #FFFAF0;
+  
+  }
+  
+  .about-wrapper{
+    display: flex;
+    padding-top: 60px;
+  }
+  
+  .about-image img{
+    width: 500px;
+    height: 530px;
+    padding: 20px;
+  }
+  
+  .about-text h2{
+    padding: 18px;
+    font-family: 'Dancing Script', cursive;
+    font-size: 50px;
+  }
+  .about-text{
+    font-family: 'Srisakdi', cursive;
+    font-size: 23px;
+    line-height: 30px;
+  }
+  
+  .about-text-bold{
+    font-weight: bold;
+  }
+
+  .testimonials{
+    background-color: #F5F5DC ;
+    padding: 40px 0;
+  }
+
+  .testimonials .container > h2,
+  .testimonials .container > p{
+    text-align: center;
+}
+
+.testimonials .container > h2{
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #222222;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.testimonials-h2{
+  text-align: center;
+}
+
+.testimonials .container > p{
+    font-size: 20px;
+    color: #a2a2a2;
+    margin-top: 20px;
+    font-family: 'droid_serifitalic';
+    font-style: italic;
+}
+
+.testimonials_list{
+    margin-top: 50px;
+    display: flex;
+}
+
+.testimonials_item{
+    flex: 1 1;
+}
+
+.testimonials_item h3,
+.testimonials_item p{
+    text-align: center;
+}
+
+.testimonials_item h3{
+    font-size: 18px;
+}
+
+.testimonials_item p{
+    font-size: 14px;
+    line-height: 25px;
+    margin-top: 22px;
+    color: #777777;
+}
+
+.testimonial_thumbnail1{
+  padding-top: 100px;
+  background-image: url(../images/testimonial_6.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  border-radius:50%;
+}
+
+.testimonial_thumbnail2{
+  padding-top: 100px;
+  background-image: url(../images/testimonial_1.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  border-radius:50%;
+}
+
+.testimonial_thumbnail3{
+  padding-top: 100px;
+  background-image: url(../images/testimonial_3.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  border-radius:50%;
+}

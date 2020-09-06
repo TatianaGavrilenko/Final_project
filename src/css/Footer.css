@@ -1,0 +1,7 @@
+.section-footer{
+    display: flex;
+    background-color: #FAE5D3;
+    padding: 40px;
+    justify-content: space-between;
+  }
+  

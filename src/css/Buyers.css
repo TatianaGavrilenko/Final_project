@@ -1,0 +1,139 @@
+
+.buyers-sellers-wrapper{
+    display: flex;
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+
+.buying-selling-text{
+    margin: 50px 0 20px;
+    color: #96c11f;
+    font-size: 72px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.buying-selling-paragraph{
+    padding: 10px;
+}
+
+.buying-selling-paragraph-bold{
+    font-weight: bold;
+    padding-top: 15px;
+}
+
+.buying-image img{
+    padding-top: 30px;
+    height: 550px;
+}
+
+.transfer-to-popup{
+    margin-top: 30px;
+    width: 219px;
+    height: 54px;
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 10px;
+    color: #96c11f;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 54px;
+    text-align: center;
+    text-transform: uppercase;
+    border: 1px solid #96c11f;
+    text-decoration: none;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.border-to-selling{
+    background-color: black;
+    background-size: cover;
+    opacity: 0.5;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    transition-duration: 3s;
+}
+
+.selling-article{
+    padding: 20px;
+}
+
+
+.popup-contact{
+    background-color: #DCF0B3;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+    background-image: url(../images/popup-contact.jpg);
+    text-align: center;
+    overflow: hidden;
+}
+
+.ReactModal__Overlay{
+    z-index: 100;
+}
+
+.ReactModal__Content{
+    bottom:135px;
+   
+}
+
+.popup-contact-form-wrapper{
+    text-align: left;
+    display: block;
+}
+
+.popup-top-logo{
+    padding-right: 50px;
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    color: #fed136;
+    display: flex;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.popup-contact-fields,
+.popup-message-field{
+    width:50%;
+}
+
+.popup_button_message{
+    height: 30px;
+    border: none;
+    width: 130px;
+    text-transform: uppercase;
+    background: white;
+    border: 1px solid green;
+}
+
+.popup-close-btn{
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 22px;
+    font-size: 17px;
+    background: black;
+    opacity: 0.4;
+    color: white;
+    cursor: pointer;
+}
+
+.popup_button_message:hover{
+    background-color: yellowgreen;
+}
+
+.popup-close-btn:hover{
+    opacity: 0.6;
+}
+
+
+

@@ -6,7 +6,7 @@ import Testimonials from './Testimonials';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Nav from './Nav/Nav';
-
+import '../images/1(3).jpg';
 
 const About = () => {
 

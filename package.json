@@ -20,7 +20,7 @@
     "react-transition-group": "^4.4.1"
   },
   "scripts": {
-    "predeploy": "yarn build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",

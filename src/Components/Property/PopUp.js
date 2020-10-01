@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 import '../../css/Property.css';
 
-//import images from '../../images';
-//import {NavLink} from "react-router-dom";
-
 
 class PopUp extends Component {
     

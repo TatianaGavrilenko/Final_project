@@ -1,20 +1,110 @@
-import React, {useState } from 'react';
+import React, {useState, useEffect } from 'react';
 import Modal from 'react-modal';
 import '../../css/Buyers.css';
-//import { bounce } from 'react-animations';
-//import { CSSTransitionGroup } from 'react-transition-group';
+import MenuHam from '../Nav/MenuHam';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 Modal.setAppElement('#root')
 
-const Buyers= () => {
+const Buyers = () => {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [email, setEmail] = useState('');
+    const [phone, setPhone] = useState('');
+    const [message, setMessage] = useState('');
 
-    const [modalIsOpen, setModalIsOpen] = useState(false)
+    const [firstNameError, setFirstNameError] = useState('');
+    const [lastNameError, setLastNameError] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [phoneError, setPhoneError] = useState('');
+    const [messageError, setMessageError] = useState('');
+
+    const onSubmit = (e) => {
+        e.preventDefault();
+        const isValid = validation();
+        if(isValid){
+            setFirstName('');
+            setLastName('');
+            setEmail('');
+            setPhone('');
+            setMessage('');
+        }
+    }
+
+    const validation = () =>{
+        let firstNameError = '';
+        let lastNameError = '';
+        let emailError ='';
+        let phoneError = '';
+        let messageError = '';
+        let isValid = true;
+
+        if(!firstName){
+            firstNameError = 'Please introduce yourself';
+            isValid = false;
+        }
+
+        if(!lastName){
+            lastNameError = 'What is your last name?';
+            isValid = false;
+        }
+
+        if (!email) {
+            emailError = 'Please enter your email';
+            isValid = false;
+      
+        } else if(!email.includes('@')){
+            emailError = 'Invalid email address';   
+            isValid = false;
+        }
+        
+
+        if (phone !== 'undefined') {
+
+            let phoneValid = /^[0-9\b]+$/;
+          
+            if(!phone){
+                phoneError = 'Please enter your number';
+                isValid = false;
+            }else if (!phone.match(phoneValid)) {
+                phoneError = 'Please enter only number';
+                isValid = false;
+            } else if(phone.length !== 11){
+                phoneError = 'Please enter valid phone number';     
+                isValid = false;     
+            }
+        }
+
+          if(!message){
+            messageError = 'What subject are you interested in?';
+            isValid = false;
+        } else if(message.length <= 10){
+            messageError = 'What subject are you interested in?';     
+            isValid = false;     
+        }
+
+        setFirstNameError(firstNameError);
+        setLastNameError(lastNameError);
+        setEmailError(emailError);
+        setPhoneError(phoneError);
+        setMessageError(messageError);
+
+        return (isValid);
+    }
+
+    useEffect(() =>{
+        Aos.init({ duration: 2000 });
+    }, []);
 
     return (
     <div className='buyers-sellers' id='buy-sell'>
+        <MenuHam />
         <div className='container-main'>
             <div className='section-buying'>
                 <div className='buyers-sellers-wrapper'>
-                    <div className='buying-article'>
+                    <div className='buying-article' data-aos='fade-in'>
                         <h2 className='buying-selling-text'>BUY WITH US</h2>
                         <div className='buying-selling-paragraph'>
                             Whether you’re buying your first home or your tenth, it’s critical to have the right professional there to help. In this competitive environment, having the right strategy to find and secure your perfect home is critical, and an understanding of the local markets is crucial.
@@ -28,12 +118,12 @@ const Buyers= () => {
                         <div className='buying-selling-paragraph-bold'>
                             Let us know what you’re looking for. We’ll make sure you get it.
                         </div>
+                        <button onClick={() => setModalIsOpen(true)} className='transfer-to-popup'>HELP ME BUY</button>
                     </div>
-                    <div className='buying-image'>
+                    <div className='buying-image' data-aos='zoom-in'>
                         <img src='images/buyer-img.jpg' alt='' />
                     </div>
                 </div>
-                <button onClick={() => setModalIsOpen(true)} className='transfer-to-popup'>HELP ME BUY</button>
                 <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
                     <div className='popup-contact'>
                     <div className='container-main'>
@@ -41,27 +131,32 @@ const Buyers= () => {
                         <div>
                             <button className='popup-close-btn' onClick={() => setModalIsOpen(false)}>X</button>
                         </div>
-                        <div className="popup-top-logo">
-                                <div className="k">
+                        <div className='popup-top-logo'>
+                                <div className='k'>
                                 Katerina
                                 </div>
-                                <div className="h">
+                                <div className='h'>
                                 Gavrilenko
                                 </div>
                         </div>
                
-                        <form method="post"> 
+                        <form method='post' > 
                             <div className='popup-contact-fields'>
-                                <input type='text' placeholder='First Name'/>
-                                <input type='text' placeholder='Last Name'/>
-                                <input type='email' placeholder='E-mail'/>
-                                <input type='phone' placeholder='Phone'/>
+                                <div style={{color:'red', fontSize: '16px'}}>{firstNameError}</div>
+                                <input className='form-modal firstName' type='text' placeholder='First Name' value={firstName} onChange={(e) => {setFirstName(e.target.value)}}/>
+                                <div style={{color:'red', fontSize: '16px'}}>{lastNameError}</div>
+                                <input className='form-modal' type='text' placeholder='Last Name'  value={lastName} onChange={(e) => {setLastName(e.target.value)}}/>
+                                <div style={{color:'red', fontSize: '16px'}}>{emailError}</div>
+                                <input className='form-modal' type='email' placeholder='E-mail' value={email} onChange={(e) => {setEmail(e.target.value)}}/>
+                                <div style={{color:'red', fontSize: '16px'}}>{phoneError}</div>
+                                <input className='form-modal' type='phone' placeholder='Phone' value={phone} onChange={(e) => {setPhone(e.target.value)}}/>
                             </div>
                             <div className='popup-message-field'>
-                                <textarea placeholder="Message*" name="message" maxLength="500"></textarea>
+                                <div style={{color:'red', fontSize: '16px'}}>{messageError}</div>
+                                <textarea  className='form-modal' placeholder='Message' name='message' maxLength='500' value={message} onChange={(e) => {setMessage(e.target.value)}}></textarea>
                             </div>
                         </form>
-                        <button className="popup_button_message" type="submit">Submit</button>
+                        <button onClick={(e) =>  onSubmit(e)} className='popup_button_message' type='submit'>Submit</button>
                         </div>
                     </div>
                     </div>
@@ -70,31 +165,26 @@ const Buyers= () => {
                     DO YOU WANT TO SELL?
                 </div>
             </div>
-            <div className='setion-selling'>
+            <div className='setion-selling' data-aos='fade-in'>
                 <div className='buyers-sellers-wrapper'>
-                    <div className='selling-image'>
+                    <div className='selling-image' data-aos='zoom-in'>
                             <img src='images/selling.jpg' alt='' />
                         </div>
                     <div className='selling-article'>
                         <h2 className='buying-selling-text'>LIST WITH US</h2>
                         <div className='buying-selling-paragraph'>
-                            <span className='buying-selling-paragraph-bold'>Selling your home can be an emotional and challenging process, especially in today’s dynamic marketplace.</span> With over 60 years of combined experience in luxury real estate transactions, the Eric Moreland and his associates understand the unique challenges and subtleties of the Austin real estate market.
+                            <div className='buying-selling-paragraph-bold'>Selling your home can be an emotional and challenging process, especially in today’s dynamic marketplace.</div> <br/>With over 60 years of combined experience in luxury real estate transactions, the Eric Moreland and his associates understand the unique challenges and subtleties of the Austin real estate market.
                         </div>
                         <div className='buying-selling-paragraph'>
-                            With a proven track record for success, our team is here to provide concierge service and guide you through every step of the sales process. Let us custom tailor a marketing program specific to your property.  <span className='buying-selling-paragraph-bold'>With our extensive network, effective marketing strategies and proprietary tools and resources support getting your home sold quickly and profitably.</span>
+                            With a proven track record for success, our team is here to provide concierge service and guide you through every step of the sales process. Let us custom tailor a marketing program specific to your property.  <div className='buying-selling-paragraph-bold'>With our extensive network, effective marketing strategies and proprietary tools and resources support getting your home sold quickly and profitably.</div>
                         </div>
                        <button onClick={() => setModalIsOpen(true)} className='transfer-to-popup'>HELP ME SELL</button>
-                         
                     </div>
-                    
                 </div>
-               
             </div>
         </div>
-</div>
-    
-        
+    </div>
     )
 }
 
-export default Buyers
+export default Buyers;

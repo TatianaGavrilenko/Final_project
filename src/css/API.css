@@ -1,0 +1,118 @@
+.houses-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1;
+    justify-content: center;
+}
+
+.form-api{
+    background-color:  #FFFAF0;
+    padding-top: 40px;
+    text-align: center;
+}
+
+
+.formHomeApi{
+    font-family: 'Dancing Script', cursive;
+    font-size: 40px;
+}
+
+.fa-key{
+    color: rgb(209, 154, 163);
+}
+
+.input-api,
+.input-api-state{
+    margin-top: 30px;
+    outline: outset;
+    height: 40px;
+    padding: 5px;
+}
+
+.input-api{
+    width:70%;
+}
+
+.input-api-state{
+    width:10%;
+    margin-left: 20px;
+}
+
+.inputs{
+    display: flex;
+    justify-content: center;
+}
+
+.input-api::placeholder,
+.input-api-state::placeholder {
+    padding: 20px;
+    color:rgb(68, 62, 62);
+    font-style: italic;
+}
+
+.btn-api{
+    border: none;
+    padding: 20px;
+    font-size: 19px;
+    width: 200px;
+    margin: 20px;
+    border-radius: 24px;
+    color: white;
+    background: rgb(209, 154, 163);
+    cursor: pointer;
+}
+
+.btn-api:hover{
+    -webkit-transform: scale(1.025);
+    transform: scale(1.025);
+    transition: all 0.1s ease-out;
+}
+
+.remove{
+    background-color: rgb(126, 65, 65);
+}
+
+.list-items{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1;
+    justify-content: center;
+}
+
+.list_name{
+    list-style: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+.list_name:hover{
+    background: rgb(209, 154, 163);
+
+}
+
+.list_name a{
+    color: rgb(139, 72, 83);
+}
+
+
+@media (max-width: 520px){
+    .inputs{
+        flex-direction: column;
+    }
+    
+    .input-api,
+    .input-api-state{
+        width: 100%;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    img.img-api{
+        max-width:300px
+    }   
+}
+
+
+
+
+

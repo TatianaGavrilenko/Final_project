@@ -2,6 +2,21 @@ import React, { Component } from 'react';
 import '../../css/Property.css';
 import PopUp from './PopUp';
 import MenuHam from '../Nav/MenuHam';
+import house1_1 from '../../images/house1_1.jpg';
+import house1_2 from '../../images/house1_2.jpg';
+import house1_3 from '../../images/house1_3.jpg';
+import house1_4 from '../../images/house1_4.jpg';
+import house1_5 from '../../images/house1_5.jpg';
+import house2_1 from '../../images/house2.jpg';
+import house2_2 from '../../images/house2_2.jpg';
+import house2_3 from '../../images/house2_3.jpg';
+import house2_4 from '../../images/house2_4.jpg';
+import house3_1 from '../../images/house3.jpg';
+import house3_2 from '../../images/house3_2.jpg';
+import house3_3 from '../../images/house3_3.jpg';
+import house3_4 from '../../images/house3_4.jpg';
+
+
 
 class Property extends Component {
     constructor(props){
@@ -9,13 +24,13 @@ class Property extends Component {
         this.state = {
             images: '',
             imagesArr1: [
-                'images/house1_1.jpg', 'images/house1_2.jpg','images/house1_3.jpg','images/house1_4.jpg', 'images/house1_5.jpg'
+                house1_1, house1_2,house1_3,house1_4, house1_5
             ],
             imagesArr2: [
-                'images/house2.jpg', 'images/house2_2.jpg',  'images/house2_3.jpg',  'images/house2_4.jpg'
+                house2_1, house2_2,  house2_3,  house2_4
             ],
             imagesArr3: [
-                'images/house3.jpg', 'images/house3_2.jpg','images/house3_3.jpg','images/house3_4.jpg'
+                house3_1, house3_2, house3_3, house3_4
             ],
             showModal: false
         }

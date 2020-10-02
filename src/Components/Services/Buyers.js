@@ -4,6 +4,8 @@ import '../../css/Buyers.css';
 import MenuHam from '../Nav/MenuHam';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import buyerImg from '../../images/buyer-img.jpg';
+import sellingImg from '../../images/selling.jpg';
 
 Modal.setAppElement('#root')
 
@@ -121,7 +123,7 @@ const Buyers = () => {
                         <button onClick={() => setModalIsOpen(true)} className='transfer-to-popup'>HELP ME BUY</button>
                     </div>
                     <div className='buying-image' data-aos='zoom-in'>
-                        <img src='images/buyer-img.jpg' alt='' />
+                        <img src={buyerImg} alt='' />
                     </div>
                 </div>
                 <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
@@ -168,7 +170,7 @@ const Buyers = () => {
             <div className='setion-selling' data-aos='fade-in'>
                 <div className='buyers-sellers-wrapper'>
                     <div className='selling-image' data-aos='zoom-in'>
-                            <img src='images/selling.jpg' alt='' />
+                            <img src={sellingImg} alt='' />
                         </div>
                     <div className='selling-article'>
                         <h2 className='buying-selling-text'>LIST WITH US</h2>

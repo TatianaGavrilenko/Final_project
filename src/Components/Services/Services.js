@@ -4,7 +4,7 @@ import '../../css/Services.css';
 import MenuHam from '../Nav/MenuHam';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
-
+import serviceImg from '../../images/photo-service.jpg'
 
 const Services = () => {
     useEffect(() =>{
@@ -37,7 +37,7 @@ const Services = () => {
                     </div>
 
                      <div className='service-image'>
-                        <img src='images/photo-service.jpg' alt=''></img>
+                        <img src={serviceImg} alt=''></img>
                     </div>
                 </div>
             </div>

@@ -6,7 +6,7 @@ import Testimonials from './Testimonials';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
 import Nav from './Nav/Nav';
-import '../images/1(3).jpg';
+import img1 from '../images/1(3).jpg';
 
 const About = () => {
 
@@ -23,7 +23,7 @@ const About = () => {
                 <div className='container-main'>
                     <div className='about-wrapper'>
                     <div className='about-image' data-aos='fade-left'>
-                        <img className='fadeInLeft' src='images/1(3).jpg' alt=''></img>
+                        <img className='fadeInLeft' src={img1} alt=''></img>
                     </div>
                     <div className='about-text' data-aos='fade-right' id='about'>
                         <h2>About Katerina</h2>

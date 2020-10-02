@@ -3,6 +3,13 @@ import {css} from 'emotion';
 import '../css/Testimonials.css';
 import Aos from 'aos';
 import 'aos/dist/aos.css';
+import testImg1 from  '../images/testimonial_1.jpg';
+import testImg7 from  '../images/testimonial_7.jpg';
+import testImg2 from  '../images/testimonial_2.jpg';
+import testImg4 from  '../images/testimonial_4.jpg';
+import testImg5 from  '../images/testimonial_5.jpg';
+import testImg3 from  '../images/testimonial_3.jpg';
+
 
 const Testimonials = () => {
    
@@ -11,15 +18,15 @@ const Testimonials = () => {
             client: 'Maria E. Flynn',
             firm: 'MANAGER AT COLDHAWK INC.',
             quote:'Katerina does an incredible amount of research, she comes prepared which makes your decision making so much easier. She supports you throughout the entire process an asset for first time buyers!',
-            thumbnail: <img src='images/testimonial_2.jpg' alt=''></img>,
+            thumbnail: <img src={testImg2} alt=''></img>,
             client2: 'Dalmar Johnson',
             firm2: 'MANAGER AT KELLER WILLIAMS',
             quote2:'Thanks so much for your patience and expertise with helping my family, find a home! You have been very professional and honest, when it’s come to listing our home as well. Thank you!',
-            thumbnail2:   <img src='images/testimonial_1.jpg' alt=''></img>,
+            thumbnail2:   <img src={testImg1} alt=''></img>,
             client3: 'Maria Brown',
             firm3: 'CEO AT ENTAVO LLC',
             quote3:'Great service!! Bought and sold for us with great deals on both sides. He had as much time for us as we needed and gave great advice. She’s very knowledgeable. Highly recommended!',
-            thumbnail3:  <img src='images/testimonial_7.jpg' alt=''></img>
+            thumbnail3:  <img src={testImg7} alt=''></img>
             
 
         },
@@ -27,15 +34,15 @@ const Testimonials = () => {
             client: 'David S. Morris',
             firm: 'CEO AT ENTAVO LLC',
             quote:'Great service!! Bought and sold for us with great deals on both sides. He had as much time for us as we needed and gave great advice. She’s very knowledgeable. Highly recommended!',
-            thumbnail:  <img src='images/testimonial_4.jpg' alt=''></img>,
+            thumbnail:  <img src={testImg4} alt=''></img>,
             client2: 'Adam Martinez',
             firm2: 'CEO AT KELLER WILLIAMS',
             quote2:'Great service!! Bought and sold for us with great deals on both sides. He had as much time for us as we needed and gave great advice. She’s very knowledgeable. Highly recommended!',
-            thumbnail2:  <img src='images/testimonial_5.jpg' alt=''></img>,
+            thumbnail2:  <img src={testImg5} alt=''></img>,
             client3: 'John Green',
             firm3: 'CEO AT MULATO LLC',
             quote3:'Great service!! Bought and sold for us with great deals on both sides. He had as much time for us as we needed and gave great advice. She’s very knowledgeable. Highly recommended!',
-            thumbnail3:  <img src='images/testimonial_3.jpg' alt=''></img>
+            thumbnail3:  <img src={testImg3} alt=''></img>
 
         }
     }

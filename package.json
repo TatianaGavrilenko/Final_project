@@ -2,7 +2,7 @@
   "name": "realtor-page",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://tatianagavrilenko.github.io/",
+  "homepage": "https://tatianagavrilenko.github.io/Final_Project",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

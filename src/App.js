@@ -19,7 +19,7 @@ class App extends React.Component{
 
       <Router>
         <Fragment>
-          <Route exact path='/Final_project'>
+          <Route exact path='/'>
                   <About />
                   <API  />
             </Route>

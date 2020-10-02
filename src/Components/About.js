@@ -16,7 +16,7 @@ const About = () => {
 
     return(
             
-        <div className='section-about' id='/'>
+        <div className='section-about' id='/Final_project'>
                 <Header />
                 <Slider />
                 <Nav />

@@ -42,9 +42,9 @@ const Footer = () => {
             </div>
                 <div className='footer-menu'>
                     <ul className='footer-menu-list' data-aos-anchor-placement='top-top'>
-                        <li className='footer-item'><NavLink to='/'>About Katerina</NavLink></li>
-                        <li className='footer-item'><NavLink to='/'>People Talk</NavLink></li>
-                        <li className='footer-item'><NavLink to='/'>Find a House</NavLink></li>
+                        <li className='footer-item'><NavLink to='/Final_project'>About Katerina</NavLink></li>
+                        <li className='footer-item'><NavLink to='/Final_project'>People Talk</NavLink></li>
+                        <li className='footer-item'><NavLink to='/Final_project'>Find a House</NavLink></li>
                         <li className='footer-item'><NavLink to='/services'>Services</NavLink></li>
                         <li className='footer-item'><NavLink to='/buy-sell'>Buy/Sell</NavLink></li>
                         <li className='footer-item'><NavLink to='/property' >Featured Property</NavLink></li>

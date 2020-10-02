@@ -1,5 +1,5 @@
 import React, {Fragment} from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom';
+import {HashRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import About from './Components/About';
 import Services from './Components/Services/Services';

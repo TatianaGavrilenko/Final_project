@@ -14,8 +14,8 @@ const MenuHam = () =>{
                     <ul className='menuham'>
                         <li className='menu-item'><NavLink to='/'>About Katerina</NavLink>
                             <ul className='list-of-subitems'>
-                                <li className='menu-subitem'><NavLink to='/Final_project'>People Talk</NavLink></li>
-                                <li className='menu-subitem'><NavLink to='/Final_project'>Find a House</NavLink></li>
+                                <li className='menu-subitem'><NavLink to='/'>People Talk</NavLink></li>
+                                <li className='menu-subitem'><NavLink to='/'>Find a House</NavLink></li>
                             </ul>
                         </li>
                         <li className='menu-item'><NavLink to='/services'>Services</NavLink>
